@@ -1,2 +1,2 @@
 from .salida_consola import mostrar_menu
-from .funciones import pp_obtener_existencias, mostrar_lista
+from .funciones import pp_obtener_existencias, mostrar_lista, mostrar_suma_fila, obtener_menos_unidades_totales

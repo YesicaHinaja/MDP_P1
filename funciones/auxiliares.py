@@ -69,4 +69,20 @@ def mostrar_matriz_formateada(matriz):
                 texto += f"{matriz[filas][columas]:15.2f} |"
             if type(matriz[filas][columas]) == int:
                 texto += f"{matriz[filas][columas]:15d}|"
+        texto = texto[0:-1]
         print (texto)
+
+#para el punto 2 suma la cantidad totales de unidades entre todos los depositos
+
+def sumar_fila(matriz:list[list], fila:int)-> int:
+    suma = 0
+    for elemento in matriz[fila]:
+        suma+= elemento
+    return suma
+
+def obtener_marcas (matriz:list[list])-> list[str]:
+    marcas = []
+    for marca in matriz[0]:
+        if not marca in marcas:
+            marcas.append(marca)
+    return marcas

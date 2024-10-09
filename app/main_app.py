@@ -1,6 +1,6 @@
 from validaciones import validar_opcion
-from funciones import  pp_obtener_existencias, mostrar_menu, mostrar_lista
-from datos import matriz_datos
+from funciones import  pp_obtener_existencias, mostrar_menu, mostrar_lista, mostrar_suma_fila, obtener_menos_unidades_totales
+from datos import matriz_datos as matriz
 import os
 
 def utn_existencias_app():
@@ -10,11 +10,11 @@ def utn_existencias_app():
         match opcion:
             case 1: 
                 print("Cargando existencias...")
-                pp_obtener_existencias(matriz_datos)  # Llama a la función para obtener existencias
+                pp_obtener_existencias(matriz)  # Llama a la función para obtener existencias
             case 2:
-                mostrar_lista(matriz_datos)
+                mostrar_suma_fila(matriz, 1, "smarphones")
             case 3:
-                pass  
+                obtener_menos_unidades_totales(matriz)
             case 4:
                 pass 
             case 5:
